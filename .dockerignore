@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Git
+.git/
+.gitignore
+
+# Tests
+test_*.py
+run_tests.py
+*_test.py
+
+# Documentation (not needed in container)
+*.md
+!README.md
+
+# Orchestra Go code (not needed for Python app)
+orchestra/cmd/
+orchestra/pkg/
+orchestra/go.mod
+orchestra/go.sum
+orchestra/Makefile
+orchestra/Dockerfile
+orchestra/docker-compose.yml
+orchestra/.github/
+orchestra/assets/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Deployment scripts
+deploy_railway.sh
+
+# Cache
+*.cache
+.cache/
