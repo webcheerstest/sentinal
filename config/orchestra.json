@@ -1,0 +1,31 @@
+{
+  "gateway": {
+    "max_concurrent_agents": 10,
+    "message_queue_size": 100
+  },
+  "session_store": {
+    "max_in_memory": 100,
+    "sqlite_path": "~/.sentinal/sessions.db",
+    "inactive_timeout_minutes": 30
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_TELEGRAM_BOT_TOKEN",
+      "allowed_users": []
+    },
+    "discord": {
+      "enabled": false,
+      "bot_token": "YOUR_DISCORD_BOT_TOKEN",
+      "allowed_guilds": []
+    }
+  },
+  "skills": {
+    "enabled": ["scam_classifier", "entity_linker", "threat_scorer"],
+    "parallel_execution": true
+  },
+  "heartbeat": {
+    "enabled": true,
+    "interval_minutes": 30
+  }
+}

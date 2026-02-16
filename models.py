@@ -24,6 +24,8 @@ class ExtractedIntelligence(BaseModel):
     phishingLinks: List[str] = []
     phoneNumbers: List[str] = []
     suspiciousKeywords: List[str] = []
+    paymentApps: List[str] = []
+    domainRiskScores: Dict[str, str] = {}
 
 class AnalyzeResponse(BaseModel):
     status: str = "success"
