@@ -14,11 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy app code
 COPY . .
 
-# Make start script executable
-RUN chmod +x start.sh
-
-# Default port
-ENV PORT=8080
-
-# Use shell script for guaranteed variable expansion
-ENTRYPOINT ["./start.sh"]
+# Run with Python directly - reads PORT from environment variable in Python
+CMD ["python", "main.py"]

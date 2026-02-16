@@ -4,6 +4,7 @@ from fastapi.responses import JSONResponse
 import logging
 import json
 import time
+import os
 
 from config import MY_API_KEY
 from models import AnalyzeRequest, AnalyzeResponse, ExtractedIntelligence
@@ -346,3 +347,8 @@ async def force_callback(
     session_manager.mark_callback_sent(session_id)
     
     return {"status": "success", "callback_triggered": True, "guvi_response": success}
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8080))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
